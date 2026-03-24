@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'dart:math';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import '../core/constants/k_cards.dart';
 import '../domain/model/game_card.dart';
@@ -13,7 +12,10 @@ class Game extends _$Game {
   Timer? _timer;
 
   @override
-  GameState build() => _initialState(30);
+  GameState build() {
+    ref.onDispose(_cancelTimer);
+    return _initialState(30);
+  }
 
   GameState _initialState(int turnDuration) => GameState(
         remainingCards: const [],
@@ -88,8 +90,7 @@ class Game extends _$Game {
     // Move skipped card to end of remaining
     final remaining = [
       ...state.remainingCards
-          .where((c) => c.id != state.currentCard!.id)
-          .toList(),
+          .where((c) => c.id != state.currentCard!.id),
       state.currentCard!,
     ];
 
@@ -144,9 +145,4 @@ class Game extends _$Game {
     _timer = null;
   }
 
-  @override
-  void dispose() {
-    _cancelTimer();
-    super.dispose();
-  }
 }

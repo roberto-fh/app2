@@ -69,7 +69,7 @@ class _TeamIntroContent extends StatelessWidget {
                 '${KStrings.teamIntroTurn} $teamName',
                 style: TextStyle(
                   fontSize: 24,
-                  color: colorScheme.onSecondary.withOpacity(0.9),
+                  color: colorScheme.onSecondary.withValues(alpha: 0.9),
                 ),
                 textAlign: TextAlign.center,
               ),
@@ -78,7 +78,7 @@ class _TeamIntroContent extends StatelessWidget {
                 '$cardsLeft ${KStrings.playingCardsLeft}',
                 style: TextStyle(
                   fontSize: 16,
-                  color: colorScheme.onSecondary.withOpacity(0.7),
+                  color: colorScheme.onSecondary.withValues(alpha: 0.7),
                 ),
               ),
               const SizedBox(height: 16),
@@ -87,7 +87,7 @@ class _TeamIntroContent extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 14,
                   fontStyle: FontStyle.italic,
-                  color: colorScheme.onSecondary.withOpacity(0.7),
+                  color: colorScheme.onSecondary.withValues(alpha: 0.7),
                 ),
                 textAlign: TextAlign.center,
               ),

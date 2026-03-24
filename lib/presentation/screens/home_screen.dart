@@ -37,7 +37,7 @@ class HomeScreen extends StatelessWidget {
                 KStrings.homeSubtitle,
                 style: TextStyle(
                   fontSize: 18,
-                  color: colorScheme.onPrimary.withOpacity(0.8),
+                  color: colorScheme.onPrimary.withValues(alpha: 0.8),
                 ),
                 textAlign: TextAlign.center,
               ),

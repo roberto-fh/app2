@@ -66,9 +66,9 @@ class _SetupContent extends StatelessWidget {
               label: '$duration s',
               onChanged: onDurationChanged,
             ),
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: const [
+              children: [
                 Text('15 s'),
                 Text('120 s'),
               ],

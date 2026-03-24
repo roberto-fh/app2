@@ -31,7 +31,7 @@ class CountdownTimer extends StatelessWidget {
                 value: progress,
                 strokeWidth: 6,
                 color: color,
-                backgroundColor: color.withOpacity(0.2),
+                backgroundColor: color.withValues(alpha: 0.2),
               ),
               Text(
                 '$seconds',
