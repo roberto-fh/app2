@@ -75,23 +75,31 @@ class _TurnSummaryContent extends StatelessWidget {
                   ),
             ),
             const SizedBox(height: 16),
-            _SectionTitle(
-              icon: Icons.check_circle,
-              color: Theme.of(context).colorScheme.tertiary,
-              label:
-                  '${KStrings.turnSummaryGuessed} (${guessed.length})',
-            ),
-            ...guessed.map((c) => _CardTile(name: c.name, correct: true)),
-            const SizedBox(height: 8),
-            if (skipped.isNotEmpty) ...[
-              _SectionTitle(
-                icon: Icons.skip_next,
-                color: Theme.of(context).colorScheme.outline,
-                label: '${KStrings.turnSummarySkipped} (${skipped.length})',
+            Expanded(
+              child: SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    _SectionTitle(
+                      icon: Icons.check_circle,
+                      color: Theme.of(context).colorScheme.tertiary,
+                      label: '${KStrings.turnSummaryGuessed} (${guessed.length})',
+                    ),
+                    ...guessed.map((c) => _CardTile(name: c.name, correct: true)),
+                    const SizedBox(height: 8),
+                    if (skipped.isNotEmpty) ...[
+                      _SectionTitle(
+                        icon: Icons.skip_next,
+                        color: Theme.of(context).colorScheme.outline,
+                        label: '${KStrings.turnSummarySkipped} (${skipped.length})',
+                      ),
+                      ...skipped.map((c) => _CardTile(name: c.name, correct: false)),
+                    ],
+                  ],
+                ),
               ),
-              ...skipped.map((c) => _CardTile(name: c.name, correct: false)),
-            ],
-            const Spacer(),
+            ),
+            const SizedBox(height: 16),
             ElevatedButton(
               onPressed: onContinue,
               child: Text(
