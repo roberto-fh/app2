@@ -1,9 +1,9 @@
 abstract class KStrings {
   // App
-  static const appName = "Time's Up!";
+  static const appName = '3 Fases';
 
   // Home
-  static const homeTitle = "Time's Up!";
+  static const homeTitle = '3 Fases';
   static const homeSubtitle = 'El juego de adivinar personajes';
   static const homePlayButton = 'JUGAR';
 

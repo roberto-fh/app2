@@ -1,4 +1,4 @@
-package com.timesup.times_up
+package com.tresfases.tres_fases
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.timesup.times_up"
+    namespace = "com.tresfases.tres_fases"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
@@ -21,7 +21,7 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId = "com.timesup.times_up"
+        applicationId = "com.tresfases.tres_fases"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
         minSdk = flutter.minSdkVersion
